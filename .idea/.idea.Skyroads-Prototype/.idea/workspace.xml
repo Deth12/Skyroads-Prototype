@@ -7,6 +7,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/AudioPostProcessor.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -16,10 +19,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/ShipController.cs" />
         <option value="$PROJECT_DIR$/Assets/Stepper.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI_Button.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameProfile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI_Button.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/AudioPostProcessor.cs" />
       </list>
     </option>
   </component>
@@ -65,7 +69,7 @@
       <updated>1602098445884</updated>
       <workItem from="1602098528584" duration="377000" />
       <workItem from="1602158261184" duration="1412000" />
-      <workItem from="1603696874365" duration="6976000" />
+      <workItem from="1603696874365" duration="10723000" />
     </task>
     <servers />
   </component>
