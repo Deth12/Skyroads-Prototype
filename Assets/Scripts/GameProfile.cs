@@ -50,6 +50,18 @@ public class GameProfile
         set => PlayerPrefs.SetInt("Highscore", value);
     }
 
+    public static float Music
+    {
+        get => PlayerPrefs.GetFloat("Music", 0f);
+        set => PlayerPrefs.SetFloat("Music", value);
+    }
+
+    public static float SFX
+    {
+        get => PlayerPrefs.GetFloat("SFX", 0f);
+        set => PlayerPrefs.SetFloat("SFX", value);
+    }
+
     public static void ResetGame()
     {
         Score = 0;

@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 public class UI_Button : MonoBehaviour, IPointerClickHandler, IPointerDownHandler, 
     IPointerUpHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    //public bool Interactable;
     [SerializeField] private RectTransform rect = null;
     
     [Header("Colors")]
