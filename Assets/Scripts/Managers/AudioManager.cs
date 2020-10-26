@@ -16,29 +16,51 @@ public class AudioManager : MonoBehaviour
         }
     }
     
-    [SerializeField] private AudioClip[] musicThemes = null;
-    
+    [SerializeField] private AudioSource musicSource = default;
+    [SerializeField] private AudioSource sfxSource = default;
+
+    public float MusicVolume
+    {
+        get => musicSource.volume;
+        set
+        {
+            musicSource.volume = value;
+            GameProfile.Music = value;
+        }
+    }
+
+    public float SFXVolume
+    {
+        get => sfxSource.volume;
+        set
+        {
+            sfxSource.volume = value;
+            GameProfile.SFX = value;
+        }
+    }
+
+    [SerializeField] private AudioClip[] musicThemes = default;
+
     private int musicThemeIndex = 0;
-    private AudioSource src;
 
     private void Start()
     {
-        src = GetComponent<AudioSource>();
         PlayNextMusic();
     }
 
-    public void PlayNextMusic()
+    private void PlayNextMusic()
     {
         if (musicThemes == null) return;
         musicThemeIndex = musicThemeIndex != musicThemes.Length - 1 ?
             UnityEngine.Random.Range(0, musicThemes.Length) : 0;
-        src.clip = musicThemes[musicThemeIndex];
-        src.Play();
+        
+        musicSource.clip = musicThemes[musicThemeIndex];
+        musicSource.Play();
     }
 
-    public void PlayOneShot(AudioClip clip, float volume)
+    public void PlayOneShot(AudioClip clip, float volume = 1f)
     {
-        src.PlayOneShot(clip, volume);
+        sfxSource.PlayOneShot(clip, volume);
     }
 
     public IEnumerator FadeAudio(AudioSource audioSource, float duration, float initialVolume, float targetVolume)
